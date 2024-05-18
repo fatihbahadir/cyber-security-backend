@@ -1,0 +1,3 @@
+format(new Date(), 'yyyyMMdd	HH:mm:ss')	83e8cd08-782d-4a34-aa2b-d6ad9780d129	Log event emmited!
+format(new Date(), 'yyyyMMdd	HH:mm:ss')	a2ebd4d0-5e34-4531-a5eb-8d29e51cae92	Log event emmited!
+format(new Date(), 'yyyyMMdd	HH:mm:ss')	0306cea8-ea85-4fbb-911c-dc60836cb124	GET	undefined	/
