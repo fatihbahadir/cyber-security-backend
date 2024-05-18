@@ -20,14 +20,19 @@ const handleLogin = async (req, res) => {
     if (!foundUser) return res.sendStatus(401); // Unauthorized
 
     // evaluate password
-    const match = await bcrypt.compare(pwd, foundUser.passsword)
+    const match = await bcrypt.compare(pwd, foundUser.password)
     if (match) {
+        const roles = Object.values(foundUser.roles);
         // Create JWT
-        const accessToken = jwt.sign(
-            { "username": foundUser.username },
+        const accessToken = jwt.sign({ 
+                "UserInfo": { 
+                    "username": foundUser.username,
+                    "roles": roles
+                }
+            },
             process.env.ACCESS_TOKEN_SECRET,
             { expiresIn: '30s' } // change it to 5 min in the production
-        )
+        );
         const refreshToken = jwt.sign(
             { "username": foundUser.username },
             process.env.REFRESH_TOKEN_SECRET,

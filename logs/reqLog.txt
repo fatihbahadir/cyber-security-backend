@@ -313,3 +313,17 @@ format(new Date(), 'yyyyMMdd	HH:mm:ss')	18d9f4fa-2ca6-4a27-9ac7-9b7ce5b13c37	GET
 20240517	22:13:38	b49c67cc-310e-4af1-aaf9-5224c76bb31d	POST	undefined	/auth
 20240517	22:13:41	6c73ca21-586d-490b-84e1-da094d394ea4	GET	undefined	/refresh
 20240517	22:13:41	02464045-bcc7-4824-b77f-21765dc65431	GET	undefined	/refresh
+20240518	13:15:35	40b20b6a-3d30-4e25-a6ff-b9d928e8359c	POST	undefined	/auth
+20240518	13:17:30	b61f5120-a43b-4fba-a76a-9c5c7466ab92	POST	undefined	/auth
+20240518	13:17:44	d6caa29f-5d45-4337-b020-33b6cb8489b6	GET	undefined	/employees
+20240518	13:17:49	8c4714f4-7911-45d2-90a1-d145ceed4e98	POST	undefined	/employees
+20240518	13:18:17	a797707a-670d-41b6-ac00-0a7eec6cd513	POST	undefined	/auth
+20240518	13:18:24	722ba1f5-1fb5-4a84-8a83-787f9fc432bf	POST	undefined	/employees
+20240518	13:18:38	60ddde0a-1c9c-4d21-b445-646fa4671473	DELETE	undefined	/employees
+20240518	13:18:43	805adf39-c68d-4295-8d85-d8821d83ed68	POST	undefined	/auth
+20240518	13:18:53	73527123-398f-4a47-9422-a93eff12a4c6	DELETE	undefined	/employees
+20240518	13:19:10	8e4d12a6-5fb6-46c2-a34b-414e69a97341	POST	undefined	/auth
+20240518	13:19:18	2f537774-e0be-4d1e-b550-cc50115ecfc4	DELETE	undefined	/employees
+20240518	13:19:28	1447bd08-f8b2-4a90-a508-9fd684ed2ba0	GET	undefined	/employees/1
+20240518	13:19:31	045f458a-dec4-4647-9781-1d0b27f3736a	GET	undefined	/employees/1
+20240518	13:19:36	6d3bad5d-5279-4619-80c5-d9a3ae696384	GET	undefined	/employees/2
