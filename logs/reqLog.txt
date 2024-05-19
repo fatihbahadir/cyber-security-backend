@@ -327,3 +327,9 @@ format(new Date(), 'yyyyMMdd	HH:mm:ss')	18d9f4fa-2ca6-4a27-9ac7-9b7ce5b13c37	GET
 20240518	13:19:28	1447bd08-f8b2-4a90-a508-9fd684ed2ba0	GET	undefined	/employees/1
 20240518	13:19:31	045f458a-dec4-4647-9781-1d0b27f3736a	GET	undefined	/employees/1
 20240518	13:19:36	6d3bad5d-5279-4619-80c5-d9a3ae696384	GET	undefined	/employees/2
+20240519	15:56:54	82e925ed-554f-49ee-8f2a-2cb94fcd89c4	POST	undefined	/register
+20240519	15:57:32	2cb39696-7160-4ac2-85a0-06b4ed81f1ec	POST	undefined	/register
+20240519	15:58:47	4b86cf7e-f4fc-4348-a115-41d93acf0d04	POST	undefined	/register
+20240519	15:59:42	732c2e53-f884-4427-b4b5-cc5c5c7dc830	POST	undefined	/register
+20240519	16:01:46	71840123-39d6-437a-9558-613d20a594d7	POST	undefined	/register
+20240519	16:02:06	d639ec34-366c-4a7b-ab78-f52aa575b36f	POST	undefined	/register
