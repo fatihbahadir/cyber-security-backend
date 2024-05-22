@@ -8,10 +8,10 @@ router.route('/')
     .get(verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor), logController.getAllLogs)
     .post(verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor), logController.createLog)
     .put(verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor), logController.updateLog)
-    .delete(verifyRoles(ROLES_LIST.Admin), logController.deleteLog)
 
 router.route('/:id')
     .get(logController.getLog)
+    .delete(verifyRoles(ROLES_LIST.Admin), logController.deleteLog)
     
 
 module.exports = router;

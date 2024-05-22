@@ -4,13 +4,13 @@ const app = express();
 const cors = require('cors');
 const corsOptions = require('./config/corsOptions');
 const { logger } = require('./middleware/logEvents');
-const errorHandler = require('./middleware/errorHandler');
 const verifyJWT = require('./middleware/verifyJWT');
 const cookieParser = require('cookie-parser');
 const credentials = require('./middleware/credentials');
 const mongoose = require('mongoose');
 const connectDB = require('./config/dbConn');
 const PORT = process.env.PORT || 3500;
+const { successResponse, errorResponse } = require("./middleware/responseHandler");
 
 // Connect to mangoDB
 connectDB();
@@ -39,7 +39,6 @@ app.use('/logout', require('./routes/logout'));
 
 
 app.use(verifyJWT);
-app.use('/employees', require('./routes/api/employees'));
 app.use('/log', require('./routes/api/log'));
 
 // app.use('/)
@@ -47,7 +46,8 @@ app.get('/', (req, res) => {
     res.send("Hello world!")
 })
 
-app.use(errorHandler);
+app.use(successResponse);
+app.use(errorResponse);
 
 mongoose.connection.once('open', () => {
     console.log("Connected to MongoDB");
