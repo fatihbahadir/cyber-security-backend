@@ -10,7 +10,7 @@ router.route('/')
     .put(verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor), logController.updateLog)
 
 router.route('/:id')
-    .get(logController.getLog)
+    .get(verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor), logController.getLog)
     .delete(verifyRoles(ROLES_LIST.Admin), logController.deleteLog)
     
 

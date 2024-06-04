@@ -24,7 +24,8 @@ app.use(credentials);
 app.use(cors(corsOptions));
 
 // built-in middleware to handle urlencoded form data
-app.use(express.urlencoded({ extended: false }));
+app.use(express.json({ limit: '50mb' }))
+app.use(express.urlencoded({ extended: true, limit : '50mb' }));
 
 // built-in middleware for json
 app.use(express.json());
@@ -40,6 +41,8 @@ app.use('/logout', require('./routes/logout'));
 
 app.use(verifyJWT);
 app.use('/log', require('./routes/api/log'));
+app.use('/email', require('./routes/api/email'));
+
 
 // app.use('/)
 app.get('/', (req, res) => {
