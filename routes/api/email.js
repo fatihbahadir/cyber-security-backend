@@ -13,4 +13,11 @@ router.route('/:id')
     .get(verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor), emailController.getEmail)
     .delete(verifyRoles(ROLES_LIST.Admin), emailController.deleteEmail);
 
+router.route('/sender/count-by')
+    .get(verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor), emailController.getEmailCountsBySender)
+
+
+router.route('/sender/count')
+    .get(verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor), emailController.getSenderCount)
+
 module.exports = router;

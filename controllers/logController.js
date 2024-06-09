@@ -95,6 +95,22 @@ const deleteLog = async (req, res, next) => {
   }
 };
 
+const getLogCountByDeviceType = async (req, res, next) => {
+  const { deviceType } = req.params;
+
+  if (!deviceType) {
+    return next({ message: "Device information is required", status: 400 });
+  }
+
+  try {
+    const logCount = await Log.countDocuments({ deviceInfo: deviceType });
+    res.locals.data = { logCount };
+    next();
+  } catch (error) {
+    next(error);
+  }
+};
+
 
 module.exports = {
   getAllLogs,
@@ -102,6 +118,7 @@ module.exports = {
   getLog,
   updateLog,
   deleteLog,
+  getLogCountByDeviceType,
   successResponse,
   errorResponse,
 };

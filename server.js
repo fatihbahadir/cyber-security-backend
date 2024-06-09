@@ -42,12 +42,7 @@ app.use('/logout', require('./routes/logout'));
 app.use(verifyJWT);
 app.use('/log', require('./routes/api/log'));
 app.use('/email', require('./routes/api/email'));
-
-
-// app.use('/)
-app.get('/', (req, res) => {
-    res.send("Hello world!")
-})
+app.use('/user', require('./routes/api/user'));
 
 app.use(successResponse);
 app.use(errorResponse);
